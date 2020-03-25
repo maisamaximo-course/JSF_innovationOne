@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#header {
+	background: #F8F8FF !important;
+	height: 10vh;
+	width: 100%;
+	margin: 0px;
+}
+
+#logo {
+	width: 200px;
+}
+
+.formulario {
+	margin: 20px;
+}
+
+#form {
+	width: 40%;
+}
+
+#form table {
+	width: 100%;
+}
+
+#form table input {
+	border: 1px solid #CCC;
+	box-shadow: none;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#form button {
+	background: none;
+	border: 2px solid #593199;
+	border-radius: 50px;
+	color: #593199;
+	height: 50px;
+	width: 250px;
+	outline: none;
+}
+
+#table {
+	width: 80%;
+	border: none;
+}
+
+#table th {
+	color: #FFF;
+	background: #593199;
+	text-shadow: none;
+	height: 30px;
+	box-shadow: none;
+}
+
+#table tr, #table td {
+	border-color: #FFF;
+}

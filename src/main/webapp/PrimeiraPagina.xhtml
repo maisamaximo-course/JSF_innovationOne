@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>meetapp</title>
+</h:head>
+<h:body>
+	<h1>Minha primeira pagina</h1>
+
+	<h:form>
+		<h:panelGrid>
+			<!-- INPUT -->
+			<h:outputFormat value="Nome do Evento:" />
+			<h:inputText />
+
+			<!-- COMBO BOX -->
+			<h:outputFormat value="Comunidades:" />
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Sou Java" />
+				<f:selectItem itemLabel="GDG" />
+			</h:selectOneMenu>
+
+			<!-- CHECK BOX -->
+			<h:outputFormat value="Tecnologia:" />
+			<h:selectManyCheckbox>
+				<f:selectItem itemLabel="Java 8" />
+				<f:selectItem itemLabel="Spring boot" />
+				<f:selectItem itemLabel="Kotlin" />
+			</h:selectManyCheckbox>
+
+			<!-- RADIO -->
+			<h:outputFormat value="Status:" />
+			<h:selectOneRadio>
+				<f:selectItem itemLabel="Ativo" />
+				<f:selectItem itemLabel="Inativo" />
+			</h:selectOneRadio>
+
+			<!-- TEXTAREA -->
+			<h:outputText value="Descrição:" />
+			<h:inputTextarea rows="5" cols="20" />
+
+			<!-- PASSWORD -->
+			<h:outputText value="Senha:" />
+			<h:inputSecret />
+
+			<!-- BUTTON -->
+			<h:commandButton value="Enviar"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

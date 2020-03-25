@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="shortcut icon" type="image/x-icon"
+		href="#{resource['images/logo.ico']}" />
+	<h:outputStylesheet library="css" name="style.css" />
+	<title>meetapp</title>
+</h:head>
+<h:body>
+	<!-- HEADER -->
+	<div id="header" class="center">
+		<h:graphicImage id="logo" library="images" name="meetapp.png" />
+	</div>
+
+	<!-- FORMULARIO -->
+	<div class="formulario center">
+		<h:form id="form">
+			<h:panelGrid>
+				<p:outputLabel value="Nome do Evento:" />
+				<p:inputText value="#{eventoBean.evento.nome}" />
+
+				<p:outputLabel value="Nome da Organização:" />
+				<p:inputText value="#{eventoBean.evento.organizacao}" />
+
+				<p:outputLabel value="Local:" />
+				<p:inputText value="#{eventoBean.evento.local}" />
+
+				<p:outputLabel value="Data:" />
+				<p:inputText type="date" value="#{eventoBean.evento.data}" />
+
+				<p:outputLabel value="Horario:" />
+				<p:inputText type="time" value="#{eventoBean.evento.horario}" />
+			</h:panelGrid>
+
+			<h:panelGrid styleClass="center">
+				<p:commandButton id="btn-enviar" value="Cadastrar"
+					action="#{eventoBean.addEvento}" update="form table" />
+			</h:panelGrid>
+		</h:form>
+	</div>
+	<!-- TABELA -->
+	<h:panelGroup styleClass="center">
+		<p:dataTable id="table"
+			value="#{eventoBean.eventos}" var="e">
+			<p:column headerText="Evento">#{e.nome}</p:column>
+			<p:column headerText="Organização">#{e.organizacao}</p:column>
+			<p:column headerText="Local">#{e.local}</p:column>
+			<p:column headerText="Data">#{e.data}</p:column>
+			<p:column headerText="Horário">#{e.horario}</p:column>
+		</p:dataTable>
+	</h:panelGroup>
+</h:body>
+</html>
